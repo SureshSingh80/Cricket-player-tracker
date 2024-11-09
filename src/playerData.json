@@ -1,0 +1,150 @@
+
+{
+    "player":[
+    {
+        "name":"Suresh Singh",
+        "Age":20,
+        "Nationality":"Indian",
+        "Gender":"Male",
+        "Role":"All rounder",
+        "Batting Order":"Last or Second Last",
+        "Bowling Style":"Medium",
+        "Batting Style":"Right Handed",
+        "image":"https://s.ndtvimg.com/images/entities/300/suresh-raina-722.png",
+        "contactNo":"8573838252"
+    },
+    {
+        "name":"Vikash Maurya",
+        "Age":23,
+        "Nationality":"Indian",
+        "Gender":"Male",
+        "Role":"All rounder",
+        "Batting Order":"Opener",
+        "Bowling Style":"Fast",
+        "Batting Style":"Right Handed",
+        "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Virat_Kohli_in_PMO_New_Delhi.jpg/220px-Virat_Kohli_in_PMO_New_Delhi.jpg",
+        "contactNo":"8576934023"
+    },
+    {
+        "name":"Gopal Ji",
+        "Age":19,
+        "Nationality":"Indian",
+        "Gender":"Male",
+        "Role":"Batsman",
+        "Batting Order":"middle-order",
+        "Bowling Style":"Slow",
+        "Batting Style":"Right Handed",
+        "image":"https://upload.wikimedia.org/wikipedia/commons/0/0c/Prime_Minister_Of_Bharat_Shri_Narendra_Modi_with_Rishabh_Pant.jpg",
+        "contactNo":"6307232694"
+    },
+    {
+        "name":"Kamaldeep Singh",
+        "Age":17,
+        "Nationality":"Indian",
+        "Gender":"Male",
+        "Role":"All rounder",
+        "Batting Order":"middle-order",
+        "Bowling Style":"Slow",
+        "Batting Style":"Right Handed",
+        "image":"https://i.pinimg.com/564x/d9/ef/4b/d9ef4b4e63d5fcc1d92773c93c033b2e.jpg",
+        "contactNo":"8299669127"
+    },
+    {
+        "name":"Sachitanand Singh",
+        "Age":27,
+        "Nationality":"Indian",
+        "Gender":"Male",
+        "Role":"All rounder",
+        "Batting Order":"middle-order",
+        "Bowling Style":"Slow",
+        "Batting Style":"Left Handed",
+        "image":"https://drop.ndtv.com/albums/SPORTS/mohammed-siraj-_638305757377394366/638305757377394366_640x480.jpeg",
+        "contactNo":"8933912395"
+    },
+    {
+        "name":"Viccky Singh",
+        "Age":18,
+        "Nationality":"Indian",
+        "Gender":"Male",
+        "Role":"All rounder",
+        "Batting Order":"Opener",
+        "Bowling Style":"Slow",
+        "Batting Style":"Left Handed",
+        "image":"https://m.economictimes.com/thumb/msid-93863149,width-1200,height-900,resizemode-4,imgsize-54170/hardik-pandya.jpg",
+        "contactNo":"7007605808"
+    },
+    {
+        "name":"Yashwant Maurya",
+        "Age":22,
+        "Nationality":"Indian",
+        "Gender":"Male",
+        "Role":"All rounder",
+        "Batting Order":"Opener",
+        "Bowling Style":"Slow",
+        "Batting Style":"Right Handed",
+        "image":"https://images.news18.com/ibnlive/uploads/2024/07/riyan-parag-makes-his-debut-for-india-2024-07-521b20eb32181fb029bda272735f2c07-16x9.jpg",
+        "contactNo":"9554507250"
+    },
+    {
+        "name":"Golu Singh",
+        "Age":27,
+        "Nationality":"Indian",
+        "Gender":"Male",
+        "Role":"Batsman",
+        "Batting Order":"middle-order",
+        "Bowling Style":"fast",
+        "Batting Style":"Right Handed",
+        "image":"https://s.ndtvimg.com/images/entities/300/shikhar-dhawan-737.png",
+        "contactNo":"9235931313"
+    },
+    {
+        "name":"Dipu Kumar Singh",
+        "Age":22,
+        "Nationality":"Indian",
+        "Gender":"Male",
+        "Role":"Batsman",
+        "Batting Order":"middle-order",
+        "Bowling Style":"fast",
+        "Batting Style":"Right Handed",
+        "image":"https://www.hindustantimes.com/static-content/1y/cricket-logos/players/yuzvendra-chahal.png",
+        "contactNo":"93529716983"
+    },
+    {
+        "name":"Tiger Singh",
+        "Age":21,
+        "Nationality":"Indian",
+        "Gender":"Male",
+        "Role":"Batsman",
+        "Batting Order":"Opener",
+        "Bowling Style":"fast",
+        "Batting Style":"Right Handed",
+        "image":"https://upload.wikimedia.org/wikipedia/commons/b/b7/Suryakumar_Yadav_in_PMO_New_Delhi.jpg",
+        "contactNo":"7985263988"
+    },
+    {
+        "name":"Shiva Sharma",
+        "Age":17,
+        "Nationality":"Indian",
+        "Gender":"Male",
+        "Role":"Batsman",
+        "Batting Order":"Opener",
+        "Bowling Style":"fast",
+        "Batting Style":"Right Handed",
+        "image":"https://upload.wikimedia.org/wikipedia/commons/7/70/Sanju_Samson_in_PMO_New_Delhi.jpg",
+        "contactNo":"7007949901"
+    },
+    {
+        "name":"Kuldip Singh",
+        "Age":18,
+        "Nationality":"Indian",
+        "Gender":"Male",
+        "Role":"Batsman",
+        "Batting Order":"middle-order",
+        "Bowling Style":"fast",
+        "Batting Style":"Right Handed",
+        "image":"https://thelucknowtribune.org/wp-content/uploads/2024/06/Kuldeep-Y.png",
+        "contactNo":"8112334289"
+    }
+]
+
+}

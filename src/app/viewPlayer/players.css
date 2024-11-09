@@ -1,0 +1,41 @@
+.players-card{
+    display: grid;
+    grid-template-columns:repeat(5,1fr);
+
+}
+@media (max-width:1500px) {
+    .players-card{
+       grid-template-columns:repeat(4,1fr);
+
+    }
+}
+@media (max-width:990px) {
+     .players-card{
+        grid-template-columns:repeat(3,1fr);
+
+     }
+}
+@media (max-width:800px) {
+    .players-card{
+       grid-template-columns:repeat(2,1fr);
+
+    }
+}
+@media (max-width:550px) {
+    .players-card div .image{
+       height:200px;
+      
+    }
+}
+@media (max-width:440px) {
+    .players-card div .image{
+       height:150px;
+      
+    }
+}
+@media (max-width:410px) {
+    .players-card div .image{
+       height:100px;
+      
+    }
+}

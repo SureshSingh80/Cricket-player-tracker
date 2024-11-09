@@ -1,0 +1,11 @@
+@media (max-width:1000px){
+    .player-container{
+         width:75%;
+    }
+}
+
+@media (max-width:500px){
+    .player-container{
+         width:100%;
+    }
+}
