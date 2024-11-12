@@ -2,64 +2,70 @@
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import CloseIcon from '@mui/icons-material/Close';
-
+import CloseIcon from "@mui/icons-material/Close";
 
 function page() {
-
-  const router=useRouter();
+  const router = useRouter();
 
   const [loading, setLoading] = useState("");
-  const [invalidLogin,setInvalidLogin]=useState(false);
- 
+  const [invalidLogin, setInvalidLogin] = useState(false);
+  const [showPass, setShowPass] = useState(false);
+
   const [admin, setAdmin] = useState({
     username: "",
     password: "",
   });
 
-
-  const onLogin = async() => {
-    
+  const handleLogin = async () => {
+    console.log("Login funciton");
     try {
       setLoading(true);
-      let response = await axios.post("/api/players/login",admin);
-      console.log("Response=",response.data);
-      const loginData=response.data;
-      console.log("LoginData=",loginData);
-      localStorage.setItem("loginStatus",true);
+      let response = await axios.post("/api/players/login", admin);
+      console.log("Response=", response.data.error);
+      const loginData = response.data;
+      console.log("LoginData=", loginData);
+      localStorage.setItem("loginStatus", true);
       alert("Login success, Press Ok to continue...");
       router.push("/dashboard");
-     
-
     } catch (error) {
-        setInvalidLogin(true);
-        console.log(error);
+      setInvalidLogin(true);
+      console.log(error);
     }
   };
 
-  const handleClose=()=>{
-     setInvalidLogin(false);
-  }
+  const handleClose = () => {
+    setInvalidLogin(false);
+  };
+
+  const onEyeClick = () => {
+    const passField = document.getElementById("password");
+    if (passField.type === "password") passField.type = "text";
+    else passField.type = "password";
+  };
 
   return (
-
-
-     
     <div className="absolute w-full h-full flex justify-center items-center  ">
-      
       <div className=" p-4 ">
-      <div className="mb-4" >
-        {invalidLogin?<span className="p-2 w-full text-red-500 border-2 border-red-300 bg-red-100">Invalid Username or password <button onClick={handleClose}><CloseIcon></CloseIcon></button> </span>:""}
-      </div>
-      
-     
+        <div className="mb-4">
+          {invalidLogin ? (
+            <span className="p-2 w-full text-red-500 border-2 border-red-300 bg-red-100">
+              Invalid Username or password{" "}
+              <button onClick={handleClose}>
+                <CloseIcon></CloseIcon>
+              </button>{" "}
+            </span>
+          ) : (
+            ""
+          )}
+        </div>
+
         <div>
           <label htmlFor="username">Username</label>
           <br />
           <input
             id="username"
             value={admin.username}
-            onChange={(e)=>setAdmin({...admin,username:e.target.value})}
+            onChange={(e) => setAdmin({ ...admin, username: e.target.value })}
             className="p-1 rounded-md outline-none focus:border-red-600 text-black"
             type="text"
             placeholder="Enter username"
@@ -74,21 +80,29 @@ function page() {
           <input
             onChange={(e) => setAdmin({ ...admin, password: e.target.value })}
             id="password"
-            vlaue={admin.password}
+            value={admin.password}
             className="p-1 rounded-md outline-none text-black"
             type="password"
             placeholder="Enter Password"
             required
           />
+          <button
+            onClick={onEyeClick}
+            className="relative left-[-25px] bg-black rounded-lg"
+          >
+            👁️
+          </button>
         </div>
 
         <br />
-         <button onClick={onLogin} className="px-4 py-2 bg-blue-500 rounded-xl">
+        <button
+          onClick={handleLogin}
+          className="px-4 py-2 bg-blue-500 rounded-xl"
+        >
           Submit
         </button>
       </div>
     </div>
-    
   );
 }
 

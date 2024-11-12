@@ -6,17 +6,23 @@ export async function POST(request) {
   try {
     const reqBody = await request.json();
     const { username, password } = reqBody;
+
+    const trimedUsername=username.trim();
+    const trimedPassword=password.trim();
     
   
     // check username or password valid or not
     let validUser=false;
     let validPassword=false;
+
      
-    if(username==='admin'){
+    if(trimedUsername==='admin'){
+      console.log("ADMIN is true");
        validUser=true;
     }
     
-    if(password==='123..'){
+    if(trimedPassword==='123..'){
+      console.log("password is true");
        validPassword=true;
     }
     
@@ -25,7 +31,7 @@ export async function POST(request) {
     
   
     if(!validUser || !validPassword){
-        
+      console.log("Invalid username or password");
       return NextResponse.json(
         { error: "username or password invalid" },
         { status: 400 }
@@ -38,7 +44,7 @@ export async function POST(request) {
       password: password
     };
   
-    const token= jwt.sign(tokenData,process.env.TOKEN_SECRET,{expiresIn:"1d"});
+    const token=  jwt.sign(tokenData,process.env.TOKEN_SECRET,{expiresIn:"1d"});
    
 
   

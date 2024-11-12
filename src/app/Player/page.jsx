@@ -3,10 +3,12 @@ import React, { useEffect, useState } from "react";
 import "./players.css";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import { RotatingLines } from "react-loader-spinner";
 
 function Players() {
 
   const [playersData,setPlayersData]=useState([]);
+  const [progress,setProgress]=useState(100);
   const router=useRouter();
   
   useEffect(()=>{
@@ -38,7 +40,7 @@ function Players() {
 
     <div className="players-card overflow-hidden">
      
-      {playersData.map((data, index) => (
+     {playersData.length>0?playersData.map((data, index) => (
         <div key={index} className="p-4 border-2 border-gray-200 m-1">
           <div>
             <img src={data.image} alt="" className="image w-full h-72" />
@@ -55,7 +57,14 @@ function Players() {
           </button>
         
         </div>
-      ))}
+      )):<div className='w-full text-center flex justify-center items-center absolute h-full'><RotatingLines
+      strokeColor="grey"
+      strokeWidth="5"
+      animationDuration="0.75"
+      width="130"
+      visible={true}
+    /></div>}
+      
 
       
     </div>

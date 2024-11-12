@@ -3,6 +3,7 @@ import React, { useState,useEffect } from 'react'
 import PhoneIcon from '@mui/icons-material/Phone';
 import axios from 'axios';
 import './player.css'
+import { RotatingLines } from 'react-loader-spinner';
 
 function Details() {
 
@@ -40,7 +41,7 @@ function Details() {
 
   return (
     <div className='flex items-center justify-center w-full h-[100%] absolute'>
-        <div className='bg-blue-500 text-white p-2 w-[50%]  player-container'>
+      {player.name? <div className='bg-blue-500 text-white p-2 w-[50%]  player-container'>
            <img src={player.image?player.image:"empty string used for avoid error(an empty error passed in src attribute) while not loading image url"} alt="image can't loaded" width={"200px"} height={"100px"} className='mb-2'/>
            <p className='mb-3'><i>Name: {player.name}</i></p>
            <p className='mb-3'>Age: {player.age}</p>
@@ -50,7 +51,14 @@ function Details() {
            <p className='mb-3'><i>Batting-Order: {player.battingOrder}</i></p>
            <p className='mb-3'><i>Batting-Style: {player.battingStyle}</i></p>
            <p className='mb-3'><i>Contact <PhoneIcon></PhoneIcon> : {player.contactNo}</i></p>
-        </div>
+        </div>:<div className='w-full text-center flex justify-center items-center absolute h-full'><RotatingLines
+      strokeColor="grey"
+      strokeWidth="5"
+      animationDuration="0.75"
+      width="130"
+      visible={true}
+    /></div>}
+       
     </div>
   )
 }

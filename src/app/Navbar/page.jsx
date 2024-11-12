@@ -18,7 +18,7 @@ function Navbar() {
 
      if(loginStatus){
 
-      const res=confirm("Hey Admin! Are you sure to logout");
+      const res=confirm("Hey Admin! Are you sure to logout ?");
       if(res){
         let response = await axios.get("/api/players/logout");
         console.log("Response=",response.data);

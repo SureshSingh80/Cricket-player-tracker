@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { useRouter } from 'next/navigation'
 import axios from 'axios';
+import './page.css'
 
 function EditPlayer() {
  
@@ -63,8 +64,8 @@ function EditPlayer() {
     
   return (
     <div className="absolute w-full h-full flex items-center justify-center ">
-    <div className="w-1/2 bg-gray-500 p-4">
-      <h2 className="text-center text-2xl">Fill Player Details</h2>
+    <div className="w-1/2 bg-gray-500 p-4 form-container">
+      <h2 className="text-center text-2xl">--- Edit Player Details ---</h2>
       <div className="mb-2">
         <label htmlFor="name">Name</label>
         <br />

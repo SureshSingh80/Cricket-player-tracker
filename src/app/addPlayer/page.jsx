@@ -3,7 +3,7 @@ import axios from "axios";
 import React from "react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-
+import './page.css'
 function addPlayer() {
 
   const router=useRouter();
@@ -34,7 +34,7 @@ function addPlayer() {
   return (
   
     <div className="absolute w-full h-full flex items-center justify-center ">
-      <div className="w-1/2 bg-gray-500 p-4">
+      <div className="w-1/2 bg-gray-500 p-4 form-container">
         <h2 className="text-center text-2xl">Fill Player Details</h2>
         <div className="mb-2">
           <label htmlFor="name">Name</label>
